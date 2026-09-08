@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive Image Gallery</title>
+
+    <link rel="stylesheet" href="gallery.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         Header
+    ========================== -->
+
+    <header class="gallery-header">
+
+        <a href="../index.html" class="back-button">
+            ← Dashboard
+        </a>
+
+
+        <div class="header-content">
+
+            <p class="small-title">
+                CODEALPHA • TASK 01
+            </p>
+
+            <h1>
+                Interactive Image Gallery
+            </h1>
+
+            <p>
+                Explore beautiful images through categories,
+                search, filters and an interactive lightbox.
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         Search & Categories
+    ========================== -->
+
+    <section class="controls">
+
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search images..."
+            >
+
+        </div>
+
+
+
+        <!-- Categories -->
+
+        <div class="category-buttons">
+
+            <button
+                class="category active"
+                data-category="all">
+                All
+            </button>
+
+
+            <button
+                class="category"
+                data-category="nature">
+                Nature
+            </button>
+
+
+            <button
+                class="category"
+                data-category="technology">
+                Technology
+            </button>
+
+
+            <button
+                class="category"
+                data-category="architecture">
+                Architecture
+            </button>
+
+
+            <button
+                class="category"
+                data-category="wildlife">
+                Wildlife
+            </button>
+
+
+            <button
+                class="category"
+                data-category="urban">
+                Urban
+            </button>
+
+
+            <button
+                class="category"
+                data-category="abstract">
+                Abstract
+            </button>
+
+        </div>
+
+
+
+        <!-- Add Image Button -->
+
+        <div class="add-image-section">
+
+            <button
+                id="addImageButton"
+                class="add-image-button">
+
+                + Add New Image
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+
+    <!-- =========================
+         Image Gallery
+    ========================== -->
+
+    <main
+        class="gallery"
+        id="gallery">
+
+
+
+        <!-- Image 01 -->
+
+        <div
+            class="image-card"
+            data-category="nature">
+
+            <img
+                src="https://picsum.photos/id/1015/600/400"
+                alt="Mountain Nature"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Mountain Escape
+                </h3>
+
+                <p>
+                    Nature
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 02 -->
+
+        <div
+            class="image-card"
+            data-category="nature">
+
+            <img
+                src="https://picsum.photos/id/1016/600/400"
+                alt="Forest Nature"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Green Forest
+                </h3>
+
+                <p>
+                    Nature
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 03 -->
+
+        <div
+            class="image-card"
+            data-category="wildlife">
+
+            <img
+                src="https://picsum.photos/id/1025/600/400"
+                alt="Cute Dog"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Friendly Companion
+                </h3>
+
+                <p>
+                    Wildlife
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 04 -->
+
+        <div
+            class="image-card"
+            data-category="nature">
+
+            <img
+                src="https://picsum.photos/id/1035/600/400"
+                alt="River"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Quiet River
+                </h3>
+
+                <p>
+                    Nature
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 05 -->
+
+        <div
+            class="image-card"
+            data-category="nature">
+
+            <img
+                src="https://picsum.photos/id/1043/600/400"
+                alt="Forest Landscape"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Forest View
+                </h3>
+
+                <p>
+                    Nature
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 06 -->
+
+        <div
+            class="image-card"
+            data-category="urban">
+
+            <img
+                src="https://picsum.photos/id/1069/600/400"
+                alt="City View"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    City Lights
+                </h3>
+
+                <p>
+                    Urban
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 07 -->
+
+        <div
+            class="image-card"
+            data-category="technology">
+
+            <img
+                src="https://picsum.photos/id/0/600/400"
+                alt="Technology"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Modern Technology
+                </h3>
+
+                <p>
+                    Technology
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 08 -->
+
+        <div
+            class="image-card"
+            data-category="technology">
+
+            <img
+                src="https://picsum.photos/id/1/600/400"
+                alt="Laptop Technology"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Digital Workspace
+                </h3>
+
+                <p>
+                    Technology
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 09 -->
+
+        <div
+            class="image-card"
+            data-category="technology">
+
+            <img
+                src="https://picsum.photos/id/2/600/400"
+                alt="Computer Technology"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Creative Computing
+                </h3>
+
+                <p>
+                    Technology
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 10 -->
+
+        <div
+            class="image-card"
+            data-category="architecture">
+
+            <img
+                src="https://picsum.photos/id/3/600/400"
+                alt="Architecture"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Modern Building
+                </h3>
+
+                <p>
+                    Architecture
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 11 -->
+
+        <div
+            class="image-card"
+            data-category="architecture">
+
+            <img
+                src="https://picsum.photos/id/4/600/400"
+                alt="Building"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    City Architecture
+                </h3>
+
+                <p>
+                    Architecture
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 12 -->
+
+        <div
+            class="image-card"
+            data-category="architecture">
+
+            <img
+                src="https://picsum.photos/id/5/600/400"
+                alt="Urban Building"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Urban Structure
+                </h3>
+
+                <p>
+                    Architecture
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 13 -->
+
+        <div
+            class="image-card"
+            data-category="wildlife">
+
+            <img
+                src="https://picsum.photos/id/6/600/400"
+                alt="Wildlife"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Wildlife Moment
+                </h3>
+
+                <p>
+                    Wildlife
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 14 -->
+
+        <div
+            class="image-card"
+            data-category="wildlife">
+
+            <img
+                src="https://picsum.photos/id/7/600/400"
+                alt="Animal"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Wild Animal
+                </h3>
+
+                <p>
+                    Wildlife
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 15 -->
+
+        <div
+            class="image-card"
+            data-category="wildlife">
+
+            <img
+                src="https://picsum.photos/id/8/600/400"
+                alt="Nature Wildlife"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Into the Wild
+                </h3>
+
+                <p>
+                    Wildlife
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 16 -->
+
+        <div
+            class="image-card"
+            data-category="urban">
+
+            <img
+                src="https://picsum.photos/id/9/600/400"
+                alt="Urban Street"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    City Street
+                </h3>
+
+                <p>
+                    Urban
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 17 -->
+
+        <div
+            class="image-card"
+            data-category="urban">
+
+            <img
+                src="https://picsum.photos/id/10/600/400"
+                alt="Urban View"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Urban View
+                </h3>
+
+                <p>
+                    Urban
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 18 -->
+
+        <div
+            class="image-card"
+            data-category="urban">
+
+            <img
+                src="https://picsum.photos/id/11/600/400"
+                alt="City Life"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    City Life
+                </h3>
+
+                <p>
+                    Urban
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 19 -->
+
+        <div
+            class="image-card"
+            data-category="abstract">
+
+            <img
+                src="https://picsum.photos/id/12/600/400"
+                alt="Abstract Art"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Abstract Vision
+                </h3>
+
+                <p>
+                    Abstract
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 20 -->
+
+        <div
+            class="image-card"
+            data-category="abstract">
+
+            <img
+                src="https://picsum.photos/id/13/600/400"
+                alt="Abstract Design"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Color & Shape
+                </h3>
+
+                <p>
+                    Abstract
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 21 -->
+
+        <div
+            class="image-card"
+            data-category="abstract">
+
+            <img
+                src="https://picsum.photos/id/14/600/400"
+                alt="Creative Art"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Creative Space
+                </h3>
+
+                <p>
+                    Abstract
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 22 -->
+
+        <div
+            class="image-card"
+            data-category="nature">
+
+            <img
+                src="https://picsum.photos/id/15/600/400"
+                alt="Nature Landscape"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Natural Landscape
+                </h3>
+
+                <p>
+                    Nature
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 23 -->
+
+        <div
+            class="image-card"
+            data-category="nature">
+
+            <img
+                src="https://picsum.photos/id/16/600/400"
+                alt="Green Nature"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Green Escape
+                </h3>
+
+                <p>
+                    Nature
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 24 -->
+
+        <div
+            class="image-card"
+            data-category="technology">
+
+            <img
+                src="https://picsum.photos/id/17/600/400"
+                alt="Tech Device"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Future Device
+                </h3>
+
+                <p>
+                    Technology
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 25 -->
+
+        <div
+            class="image-card"
+            data-category="architecture">
+
+            <img
+                src="https://picsum.photos/id/18/600/400"
+                alt="Architecture Design"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Architectural Design
+                </h3>
+
+                <p>
+                    Architecture
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 26 -->
+
+        <div
+            class="image-card"
+            data-category="wildlife">
+
+            <img
+                src="https://picsum.photos/id/19/600/400"
+                alt="Wildlife Scene"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Wildlife Scene
+                </h3>
+
+                <p>
+                    Wildlife
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 27 -->
+
+        <div
+            class="image-card"
+            data-category="urban">
+
+            <img
+                src="https://picsum.photos/id/20/600/400"
+                alt="Urban Life"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Urban Moments
+                </h3>
+
+                <p>
+                    Urban
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 28 -->
+
+        <div
+            class="image-card"
+            data-category="abstract">
+
+            <img
+                src="https://picsum.photos/id/21/600/400"
+                alt="Abstract Colors"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Abstract Colors
+                </h3>
+
+                <p>
+                    Abstract
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 29 -->
+
+        <div
+            class="image-card"
+            data-category="nature">
+
+            <img
+                src="https://picsum.photos/id/22/600/400"
+                alt="Natural Beauty"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Natural Beauty
+                </h3>
+
+                <p>
+                    Nature
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 30 -->
+
+        <div
+            class="image-card"
+            data-category="technology">
+
+            <img
+                src="https://picsum.photos/id/23/600/400"
+                alt="Technology Workspace"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Tech Workspace
+                </h3>
+
+                <p>
+                    Technology
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 31 -->
+
+        <div
+            class="image-card"
+            data-category="architecture">
+
+            <img
+                src="https://picsum.photos/id/24/600/400"
+                alt="Building Design"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Building Design
+                </h3>
+
+                <p>
+                    Architecture
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 32 -->
+
+        <div
+            class="image-card"
+            data-category="wildlife">
+
+            <img
+                src="https://picsum.photos/id/25/600/400"
+                alt="Wild Animal"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Wild Nature
+                </h3>
+
+                <p>
+                    Wildlife
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 33 -->
+
+        <div
+            class="image-card"
+            data-category="urban">
+
+            <img
+                src="https://picsum.photos/id/26/600/400"
+                alt="City Architecture"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    City Architecture
+                </h3>
+
+                <p>
+                    Urban
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 34 -->
+
+        <div
+            class="image-card"
+            data-category="abstract">
+
+            <img
+                src="https://picsum.photos/id/27/600/400"
+                alt="Abstract Pattern"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Abstract Pattern
+                </h3>
+
+                <p>
+                    Abstract
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Image 35 -->
+
+        <div
+            class="image-card"
+            data-category="nature">
+
+            <img
+                src="https://picsum.photos/id/28/600/400"
+                alt="Beautiful Nature"
+            >
+
+            <div class="image-info">
+
+                <h3>
+                    Peaceful Nature
+                </h3>
+
+                <p>
+                    Nature
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+
+    <!-- =========================
+         Add Image Modal
+    ========================== -->
+
+    <div
+        class="add-image-modal"
+        id="addImageModal">
+
+
+        <div class="add-image-box">
+
+
+            <button
+                class="modal-close"
+                id="modalClose">
+
+                &times;
+
+            </button>
+
+
+            <h2>
+                Add New Image
+            </h2>
+
+
+            <p>
+                Add an image to your gallery
+            </p>
+
+
+            <input
+                type="text"
+                id="imageUrl"
+                placeholder="Image URL"
+            >
+
+
+            <input
+                type="text"
+                id="imageTitle"
+                placeholder="Image title"
+            >
+
+
+            <select id="imageCategory">
+
+                <option value="nature">
+                    Nature
+                </option>
+
+                <option value="technology">
+                    Technology
+                </option>
+
+                <option value="architecture">
+                    Architecture
+                </option>
+
+                <option value="wildlife">
+                    Wildlife
+                </option>
+
+                <option value="urban">
+                    Urban
+                </option>
+
+                <option value="abstract">
+                    Abstract
+                </option>
+
+            </select>
+
+
+            <button
+                id="saveImageButton"
+                class="save-image-button">
+
+                Add Image
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- =========================
+         Lightbox
+    ========================== -->
+
+    <div
+        class="lightbox"
+        id="lightbox">
+
+
+        <button
+            class="close"
+            id="close">
+
+            &times;
+
+        </button>
+
+
+        <button
+            class="prev"
+            id="prev">
+
+            &#10094;
+
+        </button>
+
+
+
+        <div class="lightbox-content">
+
+
+            <img
+                id="lightboxImage"
+                src=""
+                alt=""
+            >
+
+
+            <h2
+                id="lightboxTitle">
+            </h2>
+
+
+            <p
+                id="lightboxCategory">
+            </p>
+
+
+        </div>
+
+
+
+        <button
+            class="next"
+            id="next">
+
+            &#10095;
+
+        </button>
+
+    </div>
+
+
+
+    <script src="gallery.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tayyiba | Music Player</title>
+
+    <link rel="stylesheet" href="music.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         Header
+    ========================== -->
+
+    <header class="music-header">
+
+        <a href="../index.html" class="back-button">
+            ← Dashboard
+        </a>
+
+
+        <div class="header-content">
+
+            <p class="small-title">
+                CODEALPHA • TASK 04
+            </p>
+
+            <h1>
+                Music Player
+            </h1>
+
+            <p>
+                Listen, manage and explore your favorite tracks
+                with an interactive music player.
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         Main Music App
+    ========================== -->
+
+    <main class="music-page">
+
+
+        <section class="music-app">
+
+
+            <!-- =========================
+                 Left Side - Player
+            ========================== -->
+
+            <div class="player-section">
+
+
+                <div class="now-playing-label">
+                    NOW PLAYING
+                </div>
+
+
+                <!-- Album Cover -->
+
+                <div class="album-area">
+
+                    <div class="album-cover">
+
+                        <div class="music-symbol">
+                            ♪
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Track Information -->
+
+                <div class="track-info">
+
+                    <h2 id="trackTitle">
+                        Midnight Dreams
+                    </h2>
+
+                    <p id="trackArtist">
+                        CodeAlpha Beats
+                    </p>
+
+                </div>
+
+
+                <!-- Progress -->
+
+                <div class="progress-section">
+
+                    <span id="currentTime">
+                        0:00
+                    </span>
+
+
+                    <input
+                        type="range"
+                        id="progressBar"
+                        min="0"
+                        max="100"
+                        value="0"
+                    >
+
+
+                    <span id="duration">
+                        0:00
+                    </span>
+
+                </div>
+
+
+                <!-- Main Controls -->
+
+                <div class="player-controls">
+
+
+                    <button
+                        id="shuffleButton"
+                        class="control-button"
+                        title="Shuffle">
+
+                        🔀
+
+                    </button>
+
+
+                    <button
+                        id="previousButton"
+                        class="control-button"
+                        title="Previous">
+
+                        ⏮
+
+                    </button>
+
+
+                    <button
+                        id="playButton"
+                        class="play-button"
+                        title="Play">
+
+                        ▶
+
+                    </button>
+
+
+                    <button
+                        id="nextButton"
+                        class="control-button"
+                        title="Next">
+
+                        ⏭
+
+                    </button>
+
+
+                    <button
+                        id="repeatButton"
+                        class="control-button"
+                        title="Repeat">
+
+                        🔁
+
+                    </button>
+
+                </div>
+
+
+                <!-- Volume -->
+
+                <div class="volume-section">
+
+                    <span>
+                        🔊
+                    </span>
+
+
+                    <input
+                        type="range"
+                        id="volumeControl"
+                        min="0"
+                        max="1"
+                        step="0.01"
+                        value="0.8"
+                    >
+
+
+                    <span id="volumeValue">
+                        80%
+                    </span>
+
+                </div>
+
+
+                <!-- Playback Speed -->
+
+                <div class="speed-section">
+
+                    <span>
+                        Playback Speed
+                    </span>
+
+
+                    <select id="speedControl">
+
+                        <option value="0.5">
+                            0.5x
+                        </option>
+
+                        <option value="0.75">
+                            0.75x
+                        </option>
+
+                        <option value="1" selected>
+                            1x
+                        </option>
+
+                        <option value="1.25">
+                            1.25x
+                        </option>
+
+                        <option value="1.5">
+                            1.5x
+                        </option>
+
+                        <option value="2">
+                            2x
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Audio Element -->
+
+                <audio id="audioPlayer"></audio>
+
+            </div>
+
+
+
+            <!-- =========================
+                 Right Side - Playlist
+            ========================== -->
+
+            <aside class="playlist-section">
+
+
+                <div class="playlist-header">
+
+
+                    <div>
+
+                        <p class="playlist-label">
+                            YOUR MUSIC
+                        </p>
+
+                        <h2>
+                            Playlist
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        id="addTrackButton"
+                        class="add-track-button">
+
+                        + Add Track
+
+                    </button>
+
+                </div>
+
+
+                <!-- Playlist -->
+
+                <div
+                    class="playlist"
+                    id="playlist">
+
+
+                    <!-- Track 1 -->
+
+                    <div
+                        class="track active"
+                        data-index="0">
+
+
+                        <div class="track-number">
+                            01
+                        </div>
+
+
+                        <div class="track-details">
+
+                            <h3>
+                                Midnight Dreams
+                            </h3>
+
+                            <p>
+                                CodeAlpha Beats
+                            </p>
+
+                        </div>
+
+
+                        <span class="track-duration">
+                            3:45
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- Track 2 -->
+
+                    <div
+                        class="track"
+                        data-index="1">
+
+
+                        <div class="track-number">
+                            02
+                        </div>
+
+
+                        <div class="track-details">
+
+                            <h3>
+                                Ocean Waves
+                            </h3>
+
+                            <p>
+                                Ambient Flow
+                            </p>
+
+                        </div>
+
+
+                        <span class="track-duration">
+                            4:12
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- Track 3 -->
+
+                    <div
+                        class="track"
+                        data-index="2">
+
+
+                        <div class="track-number">
+                            03
+                        </div>
+
+
+                        <div class="track-details">
+
+                            <h3>
+                                Neon Lights
+                            </h3>
+
+                            <p>
+                                Future Sound
+                            </p>
+
+                        </div>
+
+
+                        <span class="track-duration">
+                            3:28
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- Track 4 -->
+
+                    <div
+                        class="track"
+                        data-index="3">
+
+
+                        <div class="track-number">
+                            04
+                        </div>
+
+
+                        <div class="track-details">
+
+                            <h3>
+                                Calm Evening
+                            </h3>
+
+                            <p>
+                                Dreamy Audio
+                            </p>
+
+                        </div>
+
+
+                        <span class="track-duration">
+                            5:01
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- Track 5 -->
+
+                    <div
+                        class="track"
+                        data-index="4">
+
+
+                        <div class="track-number">
+                            05
+                        </div>
+
+
+                        <div class="track-details">
+
+                            <h3>
+                                Digital Journey
+                            </h3>
+
+                            <p>
+                                Tech Waves
+                            </p>
+
+                        </div>
+
+
+                        <span class="track-duration">
+                            3:56
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- Track 6 -->
+
+                    <div
+                        class="track"
+                        data-index="5">
+
+
+                        <div class="track-number">
+                            06
+                        </div>
+
+
+                        <div class="track-details">
+
+                            <h3>
+                                Starlight
+                            </h3>
+
+                            <p>
+                                Night Vibes
+                            </p>
+
+                        </div>
+
+
+                        <span class="track-duration">
+                            4:24
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         Add Track Modal
+    ========================== -->
+
+    <div
+        class="add-track-modal"
+        id="addTrackModal">
+
+
+        <div class="add-track-box">
+
+
+            <button
+                id="modalClose"
+                class="modal-close">
+
+                &times;
+
+            </button>
+
+
+            <h2>
+                Add New Track
+            </h2>
+
+
+            <p>
+                Add a music track to your playlist.
+            </p>
+
+
+            <input
+                type="text"
+                id="trackNameInput"
+                placeholder="Song title"
+            >
+
+
+            <input
+                type="text"
+                id="artistInput"
+                placeholder="Artist name"
+            >
+
+
+            <input
+                type="text"
+                id="audioUrlInput"
+                placeholder="Audio file URL"
+            >
+
+
+            <button
+                id="saveTrackButton"
+                class="save-track-button">
+
+                Add to Playlist
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="music.js"></script>
+
+</body>
+
+</html>
